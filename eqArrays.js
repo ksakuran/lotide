@@ -6,25 +6,25 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function(array1,array2) { 
+const eqArrays = function(array1,array2) {
   let x = 0;
   if (array1.length !== array2.length) {
-   return false;
+    return false;
   } else {
-        for (let i = 0; i < array1.length; i++) {
+    for (let i = 0; i < array1.length; i++) {
       if (array1[i] === array2[i]) {
         x++;
-      } else {
-        x === 0;
       }
       //console.log("array1[i]:", array1[i]);
       //console.log("array2[i]:", array2[i]);
       //console.log("x: ", x);
       //console.log("array1.length", array1.length);
       //console.log("loop number: ", i)
-    } 
+    }
   } if (x === array1.length) {
     return true;
+  } else {
+    return false;
   }
 };
 
