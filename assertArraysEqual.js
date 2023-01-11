@@ -1,4 +1,7 @@
 const eqArrays = function(array1,array2) {
+  //if (array1.length === 0 || array2.length === 0) {
+    //return console.log("Error: Do not use an empty array");
+  //}
   let x = 0;
   if (array1.length !== array2.length) {
     return false;
@@ -30,3 +33,4 @@ const assertArraysEqual = function (array1, array2) {
 
 assertArraysEqual([1,2,3],[1,2,3]);
 assertArraysEqual([1,3,5],[2,3]);
+assertArraysEqual()
