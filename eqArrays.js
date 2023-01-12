@@ -15,11 +15,7 @@ const eqArrays = function(array1,array2) {
       if (array1[i] === array2[i]) {
         x++;
       }
-      //console.log("array1[i]:", array1[i]);
-      //console.log("array2[i]:", array2[i]);
-      //console.log("x: ", x);
-      //console.log("array1.length", array1.length);
-      //console.log("loop number: ", i)
+      
     }
   } if (x === array1.length) {
     return true;
@@ -39,3 +35,9 @@ console.log(eqArrays([1,2,3],[1,2,4]));
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 assertEqual(eqArrays([1, 2, 3], [1, 2, 4]), false); // => should PASS
+
+//console.log("array1[i]:", array1[i]);
+      //console.log("array2[i]:", array2[i]);
+      //console.log("x: ", x);
+      //console.log("array1.length", array1.length);
+      //console.log("loop number: ", i)
