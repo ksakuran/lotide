@@ -30,16 +30,18 @@ const letterPositions = function(sentence) {
   for (let i = 0; i < sentence.length; i++) {
     let value = []; 
     if (sentence[i] !== " ") { //if the letter is not a space
-      if (results[sentence[i]] === []) { 
-      results[sentence[i]].push(i);
-      } else if (results[sentence[i]] !== []) { 
       results[sentence[i]] = [];
+      if (results[sentence[i]] = []); {
+        results[sentence[i]].push(i);
       }
     }
   }
-  return results; //should return key = letter value = array of indices
+  return results; //should return key = letter : value = array of indices
 };
 
  console.log(letterPositions("hello"));
 //assertArraysEqual(letterPositions("hello").e, [1]);
 
+//results[sentence[i]].push(i);
+//      } else if (results[sentence[i]] !== []) { 
+//      results[sentence[i]] = [];
