@@ -15,7 +15,7 @@ const eqArrays = function(array1,array2) {
   }
 };
 
-const assertArraysEqual = function (array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2) === true) {
     return console.log(`💸️💸️💸️Assertion Passed: ${array1} === ${array2}`);
   } else if (eqArrays(array1, array2) === false) {
@@ -25,23 +25,21 @@ const assertArraysEqual = function (array1, array2) {
 
 
 const letterPositions = function(sentence) {
+  
   const results = {};
-  //let value = [];
   for (let i = 0; i < sentence.length; i++) {
-    let value = []; 
-    if (sentence[i] !== " ") { //if the letter is not a space
-      results[sentence[i]] = [];
-      if (results[sentence[i]] = []); {
-        results[sentence[i]].push(i);
-      }
+    let letter = sentence[i];
+    if (letter == " ") {
+       //if letter is a space do nothing
+    } else if (!results[letter]) { // else if results[letter] is falsy
+      results[letter] = [i];//initalize array with the value of i
+      //console.log(results[letter]);
+    } else { //otherwise
+      results[letter].push(i); //push the value of i into the array at results[letter]
     }
-  }
-  return results; //should return key = letter : value = array of indices
+    //should return key = letter : value = array of indices
+  } return results;
 };
-
- console.log(letterPositions("hello"));
+console.log(letterPositions("hello world"));
 //assertArraysEqual(letterPositions("hello").e, [1]);
 
-//results[sentence[i]].push(i);
-//      } else if (results[sentence[i]] !== []) { 
-//      results[sentence[i]] = [];
