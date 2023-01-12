@@ -26,16 +26,20 @@ const assertArraysEqual = function (array1, array2) {
 
 const letterPositions = function(sentence) {
   const results = {};
-  let value = [];
-  for (let letters of sentence) {
-    console.log("sentence.length: ", sentence.length);
-    console.log("letters.length: ", letters.length)
-    if (letters !== " ") {
-      results[letters] = value.push(letters.length);
+  //let value = [];
+  for (let i = 0; i < sentence.length; i++) {
+    let value = []; 
+    if (sentence[i] !== " ") { //if the letter is not a space
+      if (results[sentence[i]] === []) { 
+      results[sentence[i]].push(i);
+      } else if (results[sentence[i]] !== []) { 
+      results[sentence[i]] = [];
+      }
     }
   }
-
   return results; //should return key = letter value = array of indices
 };
-console.log(letterPositions("hello"));
+
+ console.log(letterPositions("hello"));
 //assertArraysEqual(letterPositions("hello").e, [1]);
+
