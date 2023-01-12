@@ -28,10 +28,14 @@ const letterPositions = function(sentence) {
   const results = {};
   let value = [];
   for (let letters of sentence) {
-    if ()
+    console.log("sentence.length: ", sentence.length);
+    console.log("letters.length: ", letters.length)
+    if (letters !== " ") {
+      results[letters] = value.push(letters.length);
+    }
   }
 
   return results; //should return key = letter value = array of indices
 };
-
-assertArraysEqual(letterPositions("hello").e, [1]);
+console.log(letterPositions("hello"));
+//assertArraysEqual(letterPositions("hello").e, [1]);
