@@ -28,8 +28,8 @@ const takeUntil = (array, callback) => {
   //array.forEach((element,index, array)callback);
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i])) {
-    return array.slice(0,i);
-    } 
+      return array.slice(0,i);
+    }
   }
 };
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
