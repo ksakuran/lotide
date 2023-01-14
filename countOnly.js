@@ -1,9 +1,9 @@
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`💸️💸️💸️Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    return console.log(`🚨️🚨️🚨️Assertion Failed: ${actual} !== ${expected}`);
-  }
+  if (actual !== expected) {
+  console.log(`🚨️🚨️🚨️Assertion Failed: ${actual} !== ${expected}`);
+  return;
+} //happy path
+console.log(`💸️💸️💸️Assertion Passed: ${actual} === ${expected}`)
 };
 
 // allItems: an array of strings we need to look through
@@ -50,3 +50,18 @@ assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
+
+const countOnly1 = function(allItems, itemsToCount) {
+  const results = {};
+  
+  for (const item of allItems) {
+    if (itemsToCount[item]) {
+      continue;
+    }
+    if (results[item]=== undefined) {
+    results[item] = 1;
+    } 
+    results[item]++;
+  }
+  return results;
+};

@@ -1,11 +1,10 @@
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`💸️💸️💸️Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    return console.log(`🚨️🚨️🚨️Assertion Failed: ${actual} !== ${expected}`);
-  }
+  if (actual !== expected) {
+  console.log(`🚨️🚨️🚨️Assertion Failed: ${actual} !== ${expected}`);
+  return;
+} //happy path
+console.log(`💸️💸️💸️Assertion Passed: ${actual} === ${expected}`)
 };
-
 
 //should scan the object and return the first key that the callback returns a truthy value for
 //if no key is found return undefined

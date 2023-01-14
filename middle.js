@@ -1,28 +1,14 @@
-const eqArrays = function(array1,array2) {
-  //if (array1.length === 0 || array2.length === 0) {
-    //return console.log("Error: Do not use an empty array");
-  //}
-  let x = 0;
-  if (array1.length !== array2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] === array2[i]) {
-        x++;
-      }
-      //console.log("array1[i]:", array1[i]);
-      //console.log("array2[i]:", array2[i]);
-      //console.log("x: ", x);
-      //console.log("array1.length", array1.length);
-      //console.log("loop number: ", i)
-    }
-  } if (x === array1.length) {
-    return true;
-  } else {
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
     return false;
   }
+  for(let i = 0; i < arr1.length; i++) {
+    
+    if (arr2[i] !== arr1[i]) {
+      return false;
+    }
+  } return true;
 };
-
 
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2) === true) {
