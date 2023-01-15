@@ -51,17 +51,17 @@ assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
 
-const countOnly1 = function(allItems, itemsToCount) {
-  const results = {};
+// const countOnly1 = function(allItems, itemsToCount) {
+//   const results = {};
   
-  for (const item of allItems) {
-    if (itemsToCount[item]) {
-      continue;
-    }
-    if (results[item]=== undefined) {
-    results[item] = 1;
-    } 
-    results[item]++;
-  }
-  return results;
-};
+//   for (const item of allItems) {
+//     if (itemsToCount[item]) {
+//       continue;
+//     }
+//     if (results[item]=== undefined) {
+//     results[item] = 1;
+//     } 
+//     results[item]++;
+//   }
+//   return results;
+// };
