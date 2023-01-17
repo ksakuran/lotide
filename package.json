@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@ksnksn/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "mini lodash type project",
   "main": "main.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/ksakuran/lotide.git"
   },
-  "author": "",
+  "author": "Katherine Nishimura <katherine.nishimura@live.ca>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ksakuran/lotide/issues"
