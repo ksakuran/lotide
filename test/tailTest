@@ -1,9 +1,0 @@
-const tail = require("../tail");
-const assertEqual = require("../assertEqual");
-const eqArrays = require("../eqArrays");
-const assertArraysEqual = require("../assertArraysEqual")
-
-assertArraysEqual(tail([1,2,3,4]), [2,3,4]);
-
-//console.log(tail([1,2,3,4]))
-assertArraysEqual(tail(['Julie', 'Tyra', 'Matt', 'Landry']),['Tyra', 'Matt', 'Landry'])
