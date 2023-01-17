@@ -1,27 +1,3 @@
-const eqArrays = function(array1,array2) {
-  let x = 0;
-  if (array1.length !== array2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] === array2[i]) {
-        x++;
-      }
-    }
-  } if (x === array1.length) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2) === true) {
-    return console.log(`💸️💸️💸️Assertion Passed: ${array1} === ${array2}`);
-  } else if (eqArrays(array1, array2) === false) {
-    return console.log(`🚨️🚨️🚨️Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
 
 
 const map = (array, callback) => {
@@ -39,19 +15,19 @@ const map = (array, callback) => {
   return results;
 };
 
-const words = ["ground", "control", "to", "major", "tom"];
-const results1 = map(words, (word) => word[0]);
-console.log(results1);
-assertArraysEqual(words,results1);
+// const words = ["ground", "control", "to", "major", "tom"];
+// const results1 = map(words, (word) => word[0]);
+// console.log(results1);
+// assertArraysEqual(words,results1);
 
-const numbers = [1,2,3,4,5];
-const results2 = map(numbers,(number) => number * 10);
-console.log(results2);
-assertArraysEqual(numbers, results2);
+// const numbers = [1,2,3,4,5];
+// const results2 = map(numbers,(number) => number * 10);
+// console.log(results2);
+// assertArraysEqual(numbers, results2);
 
-const booleans = [true, false, true, false, false];
-const results3 = map(booleans, (boolean) => !boolean);
-console.log(results3);
-assertArraysEqual(booleans, results3)
-
+// const booleans = [true, false, true, false, false];
+// const results3 = map(booleans, (boolean) => !boolean);
+// console.log(results3);
+// assertArraysEqual(booleans, results3)
+module.exports = map;
 
