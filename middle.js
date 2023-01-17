@@ -1,37 +1,13 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for(let i = 0; i < arr1.length; i++) {
-    
-    if (arr2[i] !== arr1[i]) {
-      return false;
-    }
-  } return true;
-};
-
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2) === true) {
-    return console.log(`💸️💸️💸️Assertion Passed: ${array1} === ${array2}`);
-  } else if (eqArrays(array1, array2) === false) {
-    return console.log(`🚨️🚨️🚨️Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
-
-const isArrayLengthEven = function(array) {
-  if (array.length % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
-};
+const eqArrays = require('./eqArrays');
+const isArrayLengthEven = require('./isArrayLengthEven');
+const assertArraysEqual = require('./assertArraysEqual');
 
 //console.log("isArrayLengthEven(array):",isArrayLengthEven([1,2,3]))
 
 const middle = function(array) {
   let middleArray = [];
   let i = 0;
-  if (array.length === 0) {
+  if (!array) {
     return console.log("Error: Do not use an empty array");
   }
   if (array.length <= 2) {
@@ -44,13 +20,13 @@ const middle = function(array) {
     i = (array.length - 1) / 2;
     middleArray = array.splice(i,2);
     return middleArray;
-    //console.log("middleArray: ifEven",middleArray);
+    //console.log("middleArray: if even",middleArray);
   } else if (!isArrayLengthEven(array)) {
     //find the middle index value
     i = (array.length - 1) / 2;
     middleArray = array.splice(i,1);
   } return middleArray;
-  //console.log("middleArray: ifOdd",middleArray);
+  //console.log("middleArray: if odd",middleArray);
 };
 
 //test code
@@ -64,6 +40,8 @@ const middle = function(array) {
 //middle([1, 2, 3, 4]) // => [2, 3]
 //middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
 
-arrayTest = [1,2,3,4,5];
+// arrayTest = [1,2,3,4,5];
 
-assertArraysEqual(middle(arrayTest),[3]);
+// assertArraysEqual(middle(arrayTest),[3]);
+
+module.exports = middle;
